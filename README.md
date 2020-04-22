@@ -58,3 +58,10 @@ API
         • (2): VALUE_ID:STATUS:CODE_STR[:float]*32:ADDITIONNAL_INFO
         • (3): VALUE_ID:STATUS:CODE_STR:float:ADDITIONNAL_INFO
         • (4): VALUE_ID:STATUS:CODE_STR:[long,long]:ADDITIONNAL_INFO
+
+__VALUE_ID__ indicates the response code. The different values are listed below.<br/>
+__STATUS__ is whether “OK” or “KO”. It indicates if the command execution is a success or a failure.<br/>
+__CODE_STR__ corresponds to the verbal version of VALUE_ID. The different values are also listed below.<br/>
+__ADDITIONAL_INFO__ can contain information concerning the last checkpoint passed on the track (followed
+by the id of this checkpoint and the passage timestamp). The four different types of checkpoints are as
+follows:
