@@ -78,7 +78,7 @@ API
 
     ![presentation](https://github.com/Clement-Muth/AIA_n4s_2019/blob/master/documents/readme/img/reponse-table.png)
 
-VALUE_ID/CODE_STR correspondance:
+VALUE_ID/CODE_STR correspondance:<br/>
     ![presentation](https://github.com/Clement-Muth/AIA_n4s_2019/blob/master/documents/readme/img/correspondance-table.png)
 
 SCRIPT
