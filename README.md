@@ -43,5 +43,18 @@ API
       
 + LES COMMANDES
     
-    La communication se fait via un protocole de type texte:
+    La communication se fait via un protocole de type texte:<br/><br/>
     ![presentation](https://github.com/Clement-Muth/AIA_n4s_2019/blob/master/documents/readme/img/command-table.png)
+    
+    Par exemple, CAR_FORWARD prend un paramètre qui indique la puissance du moteur que vous souhaitez conduire
+    avec (et non pas une vitesse absolue):
+    CAR_FORWARD: 0,5 \ nm fait avancer la voiture à la moitié de sa vitesse maximale.
+
++ LES REPONSES
+
+    Voici les différents formats de réponse, correspondant à chaque type:
+        
+        • (1): VALUE_ID:STATUS:CODE_STR:ADDITIONNAL_INFO
+        • (2): VALUE_ID:STATUS:CODE_STR[:float]*32:ADDITIONNAL_INFO
+        • (3): VALUE_ID:STATUS:CODE_STR:float:ADDITIONNAL_INFO
+        • (4): VALUE_ID:STATUS:CODE_STR:[long,long]:ADDITIONNAL_INFO
