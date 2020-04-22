@@ -22,6 +22,16 @@ COPPELIASIM
     ```bash
     cmuth@debian:~/AIA_n4s_2019$ ./vrep.sh
     ```
++ SCENE
+
+    Cliquez ici pour télécharger le [package](https://intra.epitech.eu/module/2019/B-AIA-200/STG-2-1/acti-377224/project/file/B-AIA-200_n4s_package.tgz)
+    Divers fichiers «.ttt» se trouvent dans le fichier «scène». Ce sont les fichiers que CoppeliaSim utilise pour
+    enregistrez les simulations de scène.
+    En ce qui nous concerne, ils contiennent la piste et la voiture à conduire.
+    Avant de commencer vos simulations, vous devez systématiquement ouvrir la scène track_1.ttt (ou toutes les autres scènes
+    que vous avez fait vous-même) qui se trouve dans le CoppeliaSim (glisser-déposer ou via le "Fichier> Ouvrir la scène ..."
+    menu).
+
 API
 ===
 + QU'EST-CE QUE C'EST ?
@@ -65,3 +75,15 @@ __CODE_STR__ corresponds to the verbal version of VALUE_ID. The different values
 __ADDITIONAL_INFO__ can contain information concerning the last checkpoint passed on the track (followed
 by the id of this checkpoint and the passage timestamp). The four different types of checkpoints are as
 follows:
+
+![presentation](https://github.com/Clement-Muth/AIA_n4s_2019/blob/master/documents/readme/img/reponse-table.png)
+
+VALUE_ID/CODE_STR correspondance:
+![presentation](https://github.com/Clement-Muth/AIA_n4s_2019/blob/master/documents/readme/img/correspondance-table.png)
+
+SCRIPT
+===
++ QU'EST-CE QUE C'EST ?
+    
+    Un script shell (nom binaire: pipes.sh) vous permet de connecter votre programme à l'API et de lancer la    
+    simulations. C'est un binaire que vous exécuterez afin de tester votre IA.
