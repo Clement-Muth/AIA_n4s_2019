@@ -1,27 +1,23 @@
 /*
 ** EPITECH PROJECT, 2020
-** CPE_corewar_2019 [WSL: Debian]
+** Visual Studio Live Share (Workspace)
 ** File description:
 ** main
 */
 
 #include "needs.h"
 
-static bool (*process[])(void *t) =
+static void start_sim(void)
 {
-    // init,
-    // error_handling,
-    // vm_core,
-};
-
-static bool needs(const int ac, char *const restrict *const restrict av)
-{
-    for (int i = 0; process[i]; i++)
-        if (!process[i](NULL)) return (false);
-    return (true);
+    printf("%s\n", commands[start]);
 }
 
-int main(const int ac, char *const restrict *const restrict av)
+int main(void)
 {
-    return (needs(ac, av)) ? (0) : (84);
+    float speed = 1;
+
+    start_sim();
+    while (1)
+        printf("%s:%f\n", commands[forward], speed);
+    return (0);
 }
