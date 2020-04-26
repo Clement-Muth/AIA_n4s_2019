@@ -7,9 +7,10 @@
 
 #include "string.h"
 
-void
-m_putstr(const char *restrict string, const int fd)
+void m_putstr(const char *restrict string, const int fd)
 {
+    if (!string)
+        return;
     do
         m_putchar(*string, fd);
     while (*string++);

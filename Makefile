@@ -147,4 +147,4 @@ re:				fclean all
 				@(echo -e "\033[32m[Controller] :[\033[31m \c")
 				@(echo -e "$@ \033[32m]\033[0m\033[0K")
 				@($(CC) $(CFLAGS) $(LDFLAGS) -c -o $@ $<)
-				@(echo "\033[2F")
+				@(echo -e "\033[2F")

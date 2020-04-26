@@ -9,7 +9,7 @@
 #define STRUCT_H_
 
 typedef enum command_s {start, stop, forward, backward,
-                        w_dir} command;
+                        w_dir, get_inf, get_speed} command;
 
 const char *commands[] =
 {
@@ -18,7 +18,7 @@ const char *commands[] =
     "car_forward",
     "car_backwards",
     "wheels_dir",
-    "get_inf_lidar",
+    "get_info_lidar",
     "get_current_speed",
     "get_current_wheels",
     "cycle_wait",
