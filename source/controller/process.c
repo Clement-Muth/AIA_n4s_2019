@@ -14,6 +14,10 @@ char **parsing_handling_reponse(char *reponse, int type)
 
     if (!parse_reponse) return (NULL);
     m_printt("%s", parse_reponse, 2, true);
+    // my_printf(2, "%s\n", parse_reponse[4]);
+    if (parse_reponse[32] <= 1) my_printf(1, "%s:%f\n", commands[w_dir], (float)-.9);
+    else if (parse_reponse[4] <= 1) my_printf(1, "%s:%f\n", commands[w_dir], (float).9);
+    // else my_printf(1, "%s:%d\n", commands[w_dir], 0);
     if (type == 2)
         for (int i = 0; i < 32; ++i)
             if (atof(parse_reponse[i + 3]) == 0)
