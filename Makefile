@@ -44,7 +44,7 @@ LDFLAGS			=	-Iinclude/ -Llibrary \
 					-l_maths	\
 
 DFLAGS			=	-g -Wfatal-errors -Wpedantic -Wextra \
-					-Wnonnull -Wmain -Wmissing-attributes -Wsequence-point -pg
+					-Wnonnull -Wmain -Wno-attributes -Wsequence-point -pg
 
 all:			$(BIN)
 
