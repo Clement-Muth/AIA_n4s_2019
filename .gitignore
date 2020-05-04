@@ -54,3 +54,5 @@ Mkfile.old
 dkms.conf
 documents
 documents/*
+n4s_buffer
+vgcore.*
