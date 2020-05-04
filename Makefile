@@ -9,24 +9,29 @@ SUCCESS				= /bin/echo -e "\x1b[1m\x1b[33m\#\#\x1b[32m $1\x1b[0m"
 
 ## ========================================================================== ##
 PATH_DISPLAY		=	source/display/
-SRC_DISPLAY		=
+DISPLAY		=
 
 
 ## ========================================================================== ##
 PATH_ERROR		=	source/error/
-SRC_ERROR		=
+ERROR		=
 
 
 ## ========================================================================== ##
 PATH_INIT		=	source/init/
-SRC_INIT		=
+INIT		=
+
+## ========================================================================== ##
+PATH_LIB		=	source/lib/
+LIB		=
 
 
 ## ========================================================================== ##
 SRC				=	source/main.c	\
-					$(addprefix $(PATH_DISPLAY), $(SRC_DISPLAY))	\
-					$(addprefix $(PATH_ERROR), $(SRC_ERROR))	\
-					$(addprefix $(PATH_INIT), $(SRC_INIT))	\
+					$(addprefix $(PATH_DISPLAY), $(DISPLAY))	\
+					$(addprefix $(PATH_ERROR), $(ERROR))	\
+					$(addprefix $(PATH_INIT), $(INIT))	\
+					$(addprefix $(PATH_LIB), $(LIB))	\
 
 BIN				= 	ai
 
