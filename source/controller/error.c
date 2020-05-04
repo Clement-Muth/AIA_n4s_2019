@@ -5,9 +5,9 @@
 ** error
 */
 
-#include "corewar.h"
+#include "needs.h"
 
-bool error_handling(core_t *core)
+bool error_handling()
 {
     return (true);
 }

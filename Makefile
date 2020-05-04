@@ -8,29 +8,23 @@
 SUCCESS				= /bin/echo -e "\x1b[1m\x1b[33m\#\#\x1b[32m $1\x1b[0m"
 
 ## ========================================================================== ##
-PATH_DISPLAY		=	source/display/
-DISPLAY		=
-
-
-## ========================================================================== ##
-PATH_ERROR		=	source/error/
-ERROR		=
-
-
-## ========================================================================== ##
-PATH_INIT		=	source/init/
-INIT		=
+PATH_CONTROLLER		=	source/controller/
+CONTROLLER			=	display.c	\
+						error.c	\
+						free.c	\
+						init.c	\
+						process.c	\
 
 ## ========================================================================== ##
 PATH_LIB		=	source/lib/
-LIB		=
+LIB				=	move_left.c	\
+					move_right.c	\
+					print_msg.c	\
 
 
 ## ========================================================================== ##
 SRC				=	source/main.c	\
-					$(addprefix $(PATH_DISPLAY), $(DISPLAY))	\
-					$(addprefix $(PATH_ERROR), $(ERROR))	\
-					$(addprefix $(PATH_INIT), $(INIT))	\
+					$(addprefix $(PATH_CONTROLLER), $(CONTROLLER))	\
 					$(addprefix $(PATH_LIB), $(LIB))	\
 
 BIN				= 	ai

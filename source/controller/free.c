@@ -5,9 +5,9 @@
 ** free
 */
 
-#include "corewar.h"
+#include "needs.h"
 
-bool lfree(core_t *core)
+bool lfree()
 {
     return (true);
 }

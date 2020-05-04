@@ -5,9 +5,9 @@
 ** display
 */
 
-#include "corewar.h"
+#include "needs.h"
 
-bool display(core_t *core)
+bool display()
 {
     return (true);
 }

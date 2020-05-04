@@ -6,6 +6,7 @@
 */
 
 #include "needs.h"
+#include "commands.h"
 
 char **parsing_handling_reponse(char *reponse, int type)
 {
@@ -20,7 +21,7 @@ char **parsing_handling_reponse(char *reponse, int type)
     return ((m_strcmp(parse_reponse[1], "OK") ? (parse_reponse) : NULL));
 }
 
-bool process()
+bool process(void)
 {
     float speed = 1;
     char buffer[600];
