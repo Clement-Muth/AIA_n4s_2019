@@ -12,21 +12,26 @@ DONE				= /bin/echo -e "\x1b[1m\x1b[33m\#\#\x1b[34m $1\x1b[0m"
 
 LIB 				= lib_string.a
 
-SRC 				= memalloc.c	\
-					  strlen.c	\
-					  memcpy.c	\
-					  putchar.c	\
-					  putstr.c	\
-					  putnbr.c	\
-					  printt.c	\
-					  revstr.c	\
-					  strcmp.c	\
-					  strdup.c	\
-					  strcpy.c	\
-					  strncpy.c	\
-					  strnlcpy.c	\
-					  stricpy.c	\
-					  strnlen.c	\
+SRC 				=	memalloc.c	\
+						strlen.c	\
+						memcpy.c	\
+						putchar.c	\
+						putstr.c	\
+						putnbr.c	\
+						printt.c	\
+						revstr.c	\
+						strcmp.c	\
+						strdup.c	\
+						strndup.c	\
+						strcpy.c	\
+						strnccpy.c	\
+						strncpy.c	\
+						strnlcpy.c	\
+						stricpy.c	\
+						strnlen.c	\
+						my_printf.c	\
+						pr_putf.c	\
+						parser.c	\
 
 
 CFLAGS 				= -Wall -I./include
@@ -39,10 +44,10 @@ all:				$(LIB)
 					@$(call SUCCESS, "[ OK ] _string.a has been created")
 
 %.o: %.c
-					@(echo "\033[32m[string] :[\033[31m \c")
-					@(echo "$@ \033[32m]\033[0m\033[0K")
+					@(echo -e "\033[32m[string] :[\033[31m \c")
+					@(echo -e "$@ \033[32m]\033[0m\033[0K")
 					@($(CC) $(CFLAGS) -c -o $@ $<)
-					@(echo "\033[2F")
+					@(echo -e "\033[2F")
 
 $(LIB):			$(LIB_OBJ)
 					@$(AR) $(LIB) $(LIB_OBJ)

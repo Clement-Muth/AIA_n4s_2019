@@ -30,10 +30,10 @@ all:				$(LIB)
 					@$(call SUCCESS, "[ OK ] _stat.a has been created")
 
 %.o: %.c
-					@(echo "\033[32m[stat] :[\033[31m \c")
-					@(echo "$@ \033[32m]\033[0m\033[0K")
+					@(echo -e "\033[32m[stat] :[\033[31m \c")
+					@(echo -e "$@ \033[32m]\033[0m\033[0K")
 					@($(CC) $(CFLAGS) -c -o $@ $<)
-					@(echo "\033[2F")
+					@(echo -e "\033[2F")
 
 
 $(LIB):			$(LIB_OBJ)

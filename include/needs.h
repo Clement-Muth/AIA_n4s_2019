@@ -16,6 +16,7 @@
 #include "../library/maths/include/maths.h"
 #include "../library/stat/include/stat.h"
 #include "../library/string/include/string.h"
+#include "../library/assert/include/assert.h"
 
 #include "struct.h"
 #include "function.h"

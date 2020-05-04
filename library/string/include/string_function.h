@@ -17,7 +17,8 @@ void m_putstr(const char *__restrict__ string, const int fd);
 
 void m_putnbr(int number, const int fd);
 
-void m_printt(const char *__restrict__ format, const void *array, bool jump);
+void m_printt(const char *restrict format, const void *array, int fd,
+bool jump);
 
 size_t m_strlen(char *__restrict__ string);
 
@@ -32,12 +33,22 @@ void m_revstr(char *string, int length);
 
 char *m_strdup(const char *src);
 
+char *m_strndup(const char *src, int length);
+
 char *m_strcpy(char *__restrict__ dest, const char *__restrict__ src);
 
-char *m_strncpy(const char *src, const char n);
+char *m_strnccpy(const char *src, const char n);
+
+char *m_strncpy(const char *src, const int length);
 
 char *m_strnlcpy(const char *__restrict__ src, const char beg, char end);
 
 char *m_stricpy(const char *__restrict__ src, const char ign);
+
+int my_printf(int fd, char const *format, ...);
+
+int pr_putf(int fd, va_list list);
+
+char **parse(char *str, char sep);
 
 #endif /* !STRING_FUNCTION_H_ */

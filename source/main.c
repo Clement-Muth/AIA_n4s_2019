@@ -7,9 +7,22 @@
 
 #include "needs.h"
 
-static void start_sim(void)
+char **parsing_handling_reponse(char *reponse, int type)
 {
-    
+    char **parse_reponse = parse(reponse, ':');
+
+    if (!parse_reponse) return (NULL);
+    m_printt("%s", parse_reponse, 2, true);
+    if (type == 2)
+        for (int i = 0; i < 32; ++i)
+            if (atof(parse_reponse[i + 3]) == 0)
+                return (NULL);
+    return ((m_strcmp(parse_reponse[1], "OK") ? (parse_reponse) : NULL));
+}
+
+void print_msg(char const *msg)
+{
+    my_printf(1, "%s\n", msg);
 }
 
 int main(void)
@@ -17,22 +30,20 @@ int main(void)
     float speed = 1;
     char buffer[600];
     size_t size = 0;
-    char reponse[600];
-    /*stat_t *statf = m_stat(".fifo_n4s", DEFAULT, complet);
+    char *reponse = NULL;
 
-    for (int i = 0; statf->content[i]; i++)
-        m_putstr(statf->content[i], 2);
-    */start_sim();
-    read(0, reponse, 500);
+    print_msg(commands[start]);
+    getline(&reponse, &size, stdin);
     m_putstr(reponse, 2);
-    /*m_putstr("test\n", 2);
+    //my_printf(2, "%f\n", 1);
     while (1) {
-        m_putstr("hello", 2);
-        printf("%s:%f\n", commands[forward], speed);
-        read(0, reponse, 500);
-        m_putstr(reponse, 2);
-        //printf("%s:0.5\n", commands[w_dir]);
-        //m_putstr(buffer, 2);
-    }*/
+        my_printf(1,"%s:%d\n", commands[forward], 1);
+        getline(&reponse, &size, stdin);
+        if (!parsing_handling_reponse(reponse, 1)) break;
+        my_printf(1, "%s\n", commands[get_inf]);
+        getline(&reponse, &size, stdin);
+        if (!parsing_handling_reponse(reponse, 2)) break;
+    }
+    my_printf(1, commands[stop]);
     return (0);
 }

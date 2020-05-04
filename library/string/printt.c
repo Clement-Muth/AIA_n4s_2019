@@ -7,22 +7,23 @@
 
 #include "string.h"
 
-void print_string(char **array, bool jump)
+void print_string(char **array, int fd, bool jump)
 {
     for (int i = 0; array[i]; i++) {
-        m_putstr(array[i], 1);
-        if (jump) m_putchar('\n', 1);
+        m_putstr(array[i], fd);
+        if (jump) m_putchar('\n', fd);
     }
 }
 
-void printt_number(int *array)
+void printt_number(int *array, int fd)
 {
     for (int i = 0; array[i]; i++)
-        m_putnbr(array[i], 1);
+        m_putnbr(array[i], fd);
 }
 
-void m_printt(const char *restrict format, const void *array, bool jump)
+void m_printt(const char *restrict format, const void *array, int fd, bool jump)
 {
-    if (m_strcmp(format, "%s")) print_string((char **)array, jump);
-    else if (m_strcmp(format, "%d")) printt_number((int *)array);
+    if (!array) return;
+    if (m_strcmp(format, "%s")) print_string((char **)array, fd, jump);
+    else if (m_strcmp(format, "%d")) printt_number((int *)array, fd);
 }

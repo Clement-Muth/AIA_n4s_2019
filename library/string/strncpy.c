@@ -1,17 +1,16 @@
 /*
 ** EPITECH PROJECT, 2020
-** lemin_2019 [WSL: Debian]
+** Visual Studio Live Share (Workspace) [WSL: Debian]
 ** File description:
-** _strncpy
+** strncpy
 */
 
 #include "string.h"
 
-char *m_strncpy(const char *src, const char n)
+char *m_strncpy(const char *src, const int length)
 {
-    int length = m_strlen((char *)src);
     char *dest = m_memalloc(length);
 
-    for (int i = 0; src[i] && n != src[i]; i++) dest[i] = src[i];
+    for (int i = 0; i != length; i++) dest[i] = src[i];
     return (dest);
 }
